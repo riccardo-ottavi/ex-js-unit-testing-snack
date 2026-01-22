@@ -36,10 +36,20 @@ function isPalindrome(str){
     return isStrPalindrome
 }
 
+function createSlug3(str){
+    if(str.length === 0){
+        throw new Error("il titolo non può essere vuoto")
+    }
+    else if(str.length > 20){
+        throw new Error("il titolo non può essere più lungo di 20 caratteri")
+    }
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     createSlug2,
-    isPalindrome
+    isPalindrome,
+    createSlug3
 }

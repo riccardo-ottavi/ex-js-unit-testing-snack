@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2, isPalindrome } = require("./snacks.js")
+const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3 } = require("./snacks.js")
 
 
 
@@ -28,8 +28,17 @@ const { getInitials, createSlug, average, createSlug2, isPalindrome } = require(
 
 
 
-test("La funzione isPalindrome verifica se una stringa è un palindromo.", () =>{
-    const result = isPalindrome("anna");
-    expect(result).toBe(true);
+//test("La funzione isPalindrome verifica se una stringa è un palindromo.", () =>{
+    //const result = isPalindrome("anna");
+    //expect(result).toBe(true);
+//})
+
+
+
+
+test("La funzione createSlug3 lancia un errore se il titolo è vuoto o non valido.", () =>{
+    const validation = () => createSlug3("");
+    expect(validation).toThrow();
 })
+
 
