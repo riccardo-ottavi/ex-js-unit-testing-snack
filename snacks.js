@@ -5,6 +5,12 @@ function getInitials(fullName){
     return firstnameInit + lastNameInit
 }
 
+
+function createSlug(str){
+    return str.toLowerCase()
+}
+
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
