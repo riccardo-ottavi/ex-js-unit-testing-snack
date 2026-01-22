@@ -1,4 +1,6 @@
-test("La funzione somma restituisce la somma di due numeri", () =>{
-    const result = somma(1, 1);
-    expect(result).toBe(2);
+const { getInitials } = require("./snacks.js")
+
+test("La funzione getInitials restituisce le iniziali di un nome completo.", () =>{
+    const result = getInitials("Riccardo Ottavi");
+    expect(result).toBe("RO");
 })
