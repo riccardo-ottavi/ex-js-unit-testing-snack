@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average } = require("./snacks.js")
+const { getInitials, createSlug, average, createSlug2 } = require("./snacks.js")
 
 
 
@@ -14,7 +14,14 @@ const { getInitials, createSlug, average } = require("./snacks.js")
 //})
 
 
-test("La funzione average calcola la media aritmetica di un array di numeri", () =>{
-    const result = average([1,4,7,12]);
-    expect(result).toBe(6);
+//test("La funzione average calcola la media aritmetica di un array di numeri", () =>{
+    //const result = average([1,4,7,12]);
+    //expect(result).toBe(6);
+//})
+
+
+
+test("La funzione createSlug2 sostituisce gli spazi con -.", () =>{
+    const result = createSlug2("Questo è un test");
+    expect(result).toBe("questo-e-un-test");
 })

@@ -19,8 +19,16 @@ function average(arr){
     return average
 }
 
+function createSlug2(str){
+    const normalized = str.toLowerCase().replace("è", "e")
+    const result = normalized.replace(/ /g, "-")
+    
+    return result
+}
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    createSlug2
 }
