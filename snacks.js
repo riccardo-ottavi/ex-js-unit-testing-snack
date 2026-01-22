@@ -45,11 +45,22 @@ function createSlug3(str){
     }
 }
 
+function findPostById(arr, id) {
+    const post = arr.find(p => p.id === id);
+
+    if (!post || !post.title) {
+        throw new Error("Post non conforme");
+    }
+
+    return post;
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     createSlug2,
     isPalindrome,
-    createSlug3
+    createSlug3,
+    findPostById
 }

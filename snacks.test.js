@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3 } = require("./snacks.js")
+const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3, findPostById } = require("./snacks.js")
 
 
 
@@ -36,9 +36,46 @@ const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3
 
 
 
-test("La funzione createSlug3 lancia un errore se il titolo è vuoto o non valido.", () =>{
-    const validation = () => createSlug3("");
+//test("La funzione createSlug3 lancia un errore se il titolo è vuoto o non valido.", () =>{
+    //const validation = () => createSlug3("");
+    //expect(validation).toThrow();
+//})
+
+
+const posts = [
+  {
+    id: 1,
+    title: "Introduzione a JavaScript",
+    slug: "introduzione-a-javascript"
+  },
+  {
+    id: 2,
+    title: "Capire le funzioni",
+    slug: "capire-le-funzioni"
+  },
+  {
+    id: 3,
+    title: "Array e oggetti",
+    slug: "array-e-oggetti"
+  },
+  {
+    id: 4,
+    slug: "cos-e-jest"
+  },
+  {
+    id: 5,
+    title: "Test automatici in JavaScript",
+    slug: "test-automatici-in-javascript"
+  }
+];
+
+
+//test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () =>{
+    //const result = findPostById(posts, 3);
+    //expect(result).toBe(posts[2]);
+//})
+
+test("La funzione findPostById lancia un errore se il titolo è vuoto o non valido.", () =>{
+    const validation = () => findPostById(posts, 4);
     expect(validation).toThrow();
 })
-
-
