@@ -26,9 +26,20 @@ function createSlug2(str){
     return result
 }
 
+function isPalindrome(str){
+    let isStrPalindrome = true
+    for(let i = 0; i < str.length/ 2; i++){
+        if(str[i] !== str[str.length-1-i]){
+            isStrPalindrome = false
+        }
+    }
+    return isStrPalindrome
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    createSlug2
+    createSlug2,
+    isPalindrome
 }

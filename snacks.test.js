@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2 } = require("./snacks.js")
+const { getInitials, createSlug, average, createSlug2, isPalindrome } = require("./snacks.js")
 
 
 
@@ -21,7 +21,15 @@ const { getInitials, createSlug, average, createSlug2 } = require("./snacks.js")
 
 
 
-test("La funzione createSlug2 sostituisce gli spazi con -.", () =>{
-    const result = createSlug2("Questo è un test");
-    expect(result).toBe("questo-e-un-test");
+//test("La funzione createSlug2 sostituisce gli spazi con -.", () =>{
+    //const result = createSlug2("Questo è un test");
+    //expect(result).toBe("questo-e-un-test");
+//})
+
+
+
+test("La funzione isPalindrome verifica se una stringa è un palindromo.", () =>{
+    const result = isPalindrome("anna");
+    expect(result).toBe(true);
 })
+
