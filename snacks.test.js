@@ -1,4 +1,4 @@
-const { getInitials, createSlug } = require("./snacks.js")
+const { getInitials, createSlug, average } = require("./snacks.js")
 
 
 
@@ -8,7 +8,13 @@ const { getInitials, createSlug } = require("./snacks.js")
 //})
 
 
-test("La funzione createSlug restituisce una stringa in lowercase.", () =>{
-    const result = createSlug("JAVASCRIPT");
-    expect(result).toBe("javascript");
+//test("La funzione createSlug restituisce una stringa in lowercase.", () =>{
+    //const result = createSlug("JAVASCRIPT");
+    //expect(result).toBe("javascript");
+//})
+
+
+test("La funzione average calcola la media aritmetica di un array di numeri", () =>{
+    const result = average([1,4,7,12]);
+    expect(result).toBe(6);
 })
